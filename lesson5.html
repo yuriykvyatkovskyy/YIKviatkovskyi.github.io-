@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Сторінка уроку — WebKids</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a href="index.html" class="brand" aria-label="На головну">
+          <img src="assets/logo.svg" alt="Лого WebKids" class="logo-img" />
+          <span class="brand__text">WebKids</span>
+        </a>
+        <div class="nav-right">
+          <nav class="menu" aria-label="Головне меню">
+            <a class="active" href="index.html">Головна</a>
+            <a href="lessons.html">Уроки</a>
+            <a href="about.html">Про нас</a>
+            <a href="faq.html">FAQ</a>
+            <a href="enroll.html">Записатися</a>
+            <a href="contact.html">Контакти</a>
+            <a href="dashboard.html">Кабінет</a>
+          </nav>
+          <div class="actions">
+            <a class="btn ghost" href="lesson1.html">Спробувати урок</a>
+            <a class="btn primary" href="enroll.html">Записатися</a>
+          </div>
+        </div>
+        <button class="burger" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <main class="section">
+      <div class="container lesson-page">
+        <nav class="breadcrumbs">
+          <a href="index.html">Головна</a> / <a href="lessons.html">Уроки</a> /
+          <span> Урок 5</span>
+        </nav>
+        <article class="lesson-head card">
+          <h1>Урок 5: Блок‑модель</h1>
+          <p class="muted">Тривалість: 45 хв</p>
+          <div class="lesson-actions">
+            <a class="btn primary" href="#video">Дивитися відео</a
+            ><a class="btn ghost" href="#tasks">Домашнє завдання</a>
+          </div>
+        </article>
+        <section id="video" class="card">
+          <h2>Відео</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/faIknwAs3Ng?si=JyxsFRi_1Cf-CyBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <br><b>Box Model</b>
+        </section>
+        <section class="grid">
+          <div class="col col-8">
+            <article class="card">
+              <h2>Теорія</h2>
+              <p>
+                <b>Блок-модель (Box Model) у CSS</b>
+                <br />Уяви собі HTML-елемент як коробку. Усі елементи на
+                сторінці, незалежно від того, текст це чи кнопка, — мають свою
+                коробку. Ця блок-модель складається з чотирьох основних шарів:
+              </p>
+              <img src="./assets/example-css.jpg" alt="css" />
+               <p>
+                <ol>
+                  <li><b>margin — зовнішній відступ</b></li>
+                        <br>Це простір зовні елемента. Він відділяє елемент від інших на сторінці.
+                        <br>Приклад: 
+                        <br> div {
+                        <br>margin: 20px; /* з усіх боків */
+                        <br>}
+                  <li><b>padding — внутрішній відступ</b></li>
+                        <br>Це простір всередині елемента, між вмістом і рамкою (border).
+                        <br>Приклад: 
+                        <br> div {
+                        <br>padding: 15px; /* текст буде "дихати", не прилипати до країв */
+                        <br>}
+                  <li><b>border — рамка навколо контенту й падінгу</b></li>
+                        <br>Це лінія навколо елемента. Її можна стилізувати: товщина, колір, тип (суцільна, пунктирна тощо).
+                        <br>Приклад: 
+                        <br> div {
+                        <br> border: 2px solid black;
+                        <br>}
+                  <li><b>display — спосіб відображення елемента</b></li>
+                        <br>Це властивість визначає як елемент поводиться у потоці документа.
+                        <ul>Найважливіші значення:
+                          <li>block - Блочний елемент: займає весь ряд (наприклад, &lt;div&gt; &lt;p&gt;)</li>
+                          <li>inline - Рядковий елемент: займає лише ширину свого вмісту (наприклад, &lt;span&gt;)</li>
+                          <li>inline-block - Комбінація: поводиться як inline, але можна задавати width, height, margin, padding</li>
+                          <li>none - Елемент взагалі не відображається</li>
+                          <li>flex / grid - Сучасні системи розкладки (пояснення на окрему тему)</li>
+                        </ul>
+                </ol>
+                <p> 
+                      <ul>Створимо "коробку", яка:
+                        <li>матиме 10px простору навколо себе (margin),</li>
+                        <li>20px простору всередині перед текстом (padding),</li>
+                        <li>рамку товщиною 1px,</li>
+                        <li>поводитиметься як блок (на новому рядку).</li>
+                      </ul> 
+                    <br> .box {
+                    <br>margin: 10px;
+                    <br>padding: 20px;
+                    <br>border: 1px solid gray;
+                    <br>display: block;
+                    <br>}
+                </p>
+              </p>
+            </article>
+            <article id="tasks" class="card">
+              <h2>Домашнє завдання</h2>
+              <ol>
+                <li>Вивчити конспект</li>
+                <li>Створити 5 блокових моделей</li>
+              </ol>
+            </article>
+          </div>
+          <aside class="col col-4">
+            <div class="card">
+              <h3>Наступний урок</h3>
+              <a class="btn ghost" href="lesson6.html">Перейти</a>
+            </div>
+          </aside>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <p>© 2025 WebKids. Усі права захищено.</p>
+        <nav class="footer__nav">
+          <a href="#">Політика конфіденційності</a
+          ><a href="contact.html">Контакти</a>
+        </nav>
+      </div>
+    </footer>
+    <script>
+      const burger = document.querySelector(".burger");
+      const navRight = document.querySelector(".nav-right");
+
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        navRight.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WebKids — Навчання HTML & CSS (8–9 клас)</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a href="index.html" class="brand" aria-label="На головну">
+          <img src="assets/logo.svg" alt="Лого WebKids" class="logo-img" />
+          <span class="brand__text">WebKids</span>
+        </a>
+        <div class="nav-right">
+          <nav class="menu" aria-label="Головне меню">
+            <a class="active" href="index.html">Головна</a>
+            <a href="lessons.html">Уроки</a>
+            <a href="about.html">Про нас</a>
+            <a href="faq.html">FAQ</a>
+            <a href="enroll.html">Записатися</a>
+            <a href="contact.html">Контакти</a>
+            <a href="dashboard.html">Кабінет</a>
+          </nav>
+          <div class="actions">
+            <a class="btn ghost" href="lesson1.html">Спробувати урок</a>
+            <a class="btn primary" href="enroll.html">Записатися</a>
+          </div>
+        </div>
+        <button class="burger" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <div class="badges">
+            <span class="badge">8–9 клас</span
+            ><span class="badge success">Початковий рівень</span>
+          </div>
+          <h1>
+            Створи свій перший сайт на <span class="mark">HTML & CSS</span>
+          </h1>
+          <p class="lead">
+            Крок за кроком: теги, стилі, макети і власний міні‑проєкт за 4
+            тижні.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="enroll.html">Почати курс</a
+            ><a class="btn ghost" href="lessons.html">Дізнатися програму</a>
+          </div>
+        </div>
+        <aside class="hero__card card">
+          <h3>Що будемо вчити</h3>
+          <ul class="checklist">
+            <li>HTML: заголовки, параграфи, списки, посилання, зображення</li>
+            <li>CSS: кольори, шрифти, відступи, рамки</li>
+            <li>Flexbox і сітки для адаптивності</li>
+            <li>Міні‑проєкт: лендінг «Мій улюблений предмет»</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+    <section class="section alt">
+      <div class="container">
+        <div class="section__title">
+          <h2>Популярні уроки</h2>
+          <a href="lessons.html" class="link">Переглянути всі →</a>
+        </div>
+        <div class="grid">
+          <div class="col col-4">
+            <article class="card lesson">
+              <h3>1. Вступ і HTML</h3>
+              <p>Що таке веб? Основи HTML.</p>
+              <a class="btn ghost" href="lesson1.html">Відкрити</a>
+            </article>
+          </div>
+          <div class="col col-4">
+            <article class="card lesson">
+              <h3>4. CSS старт</h3>
+              <p>Кольори, шрифти, рамки.</p>
+              <a class="btn ghost" href="lesson4.html">Відкрити</a>
+            </article>
+          </div>
+          <div class="col col-4">
+            <article class="card lesson">
+              <h3>6. Flexbox</h3>
+              <p>Вирівнювання блоків.</p>
+              <a class="btn ghost" href="lesson6.html">Відкрити</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta section">
+      <div class="container cta__inner">
+        <h2>Готові почати?</h2>
+        <p class="lead">Запишись сьогодні та отримай пробний урок.</p>
+        <a class="btn primary" href="enroll.html">Записатися</a>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <p>© 2025 WebKids. Усі права захищено.</p>
+        <nav class="footer__nav">
+          <a href="#">Політика конфіденційності</a
+          ><a href="contact.html">Контакти</a>
+        </nav>
+      </div>
+    </footer>
+    <script>
+      const burger = document.querySelector(".burger");
+      const navRight = document.querySelector(".nav-right");
+
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        navRight.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

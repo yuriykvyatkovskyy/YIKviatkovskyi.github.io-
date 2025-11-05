@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Сторінка уроку — WebKids</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+   <header class="header">
+      <div class="container nav">
+        <a href="index.html" class="brand" aria-label="На головну">
+          <img src="assets/logo.svg" alt="Лого WebKids" class="logo-img" />
+          <span class="brand__text">WebKids</span>
+        </a>
+        <div class="nav-right">
+          <nav class="menu" aria-label="Головне меню">
+            <a class="active" href="index.html">Головна</a>
+            <a href="lessons.html">Уроки</a>
+            <a href="about.html">Про нас</a>
+            <a href="faq.html">FAQ</a>
+            <a href="enroll.html">Записатися</a>
+            <a href="contact.html">Контакти</a>
+            <a href="dashboard.html">Кабінет</a>
+          </nav>
+          <div class="actions">
+            <a class="btn ghost" href="lesson1.html">Спробувати урок</a>
+            <a class="btn primary" href="enroll.html">Записатися</a>
+          </div>
+        </div>
+        <button class="burger" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <main class="section">
+      <div class="container lesson-page">
+        <nav class="breadcrumbs">
+          <a href="index.html">Головна</a> / <a href="lessons.html">Уроки</a> /
+          <span> Урок 4</span>
+        </nav>
+        <article class="lesson-head card">
+          <h1>Урок 4: CSS старт</h1>
+          <p class="muted">Тривалість: 45 хв</p>
+          <div class="lesson-actions">
+            <a class="btn primary" href="#video">Дивитися відео</a
+            ><a class="btn ghost" href="#tasks">Домашнє завдання</a>
+          </div>
+        </article>
+        <section id="video" class="card">
+          <h2>Відео</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/HrP4qGazzE0?si=J9hf_Q-pI3r5hYxF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
+          <br><b>Основи CSS</b>
+        </section>
+        <section class="grid">
+          <div class="col col-8">
+            <article class="card">
+              <h2>Теорія</h2>
+              <p>
+                <b>CSS (Cascading Style Sheets)</b> — це мова стилів, що
+                використовується для опису зовнішнього вигляду веб-сторінок,
+                написаних мовою розмітки, як-от HTML. Вона визначає, як елементи
+                веб-сторінки мають виглядати на екрані, папері чи інших носіях,
+                зокрема, колір, розмір шрифту, розташування та інші візуальні
+                аспекти.
+                <ul>
+                <li>
+                  <b>Розділення структури та стилю:</b> 
+                  CSS дозволяє відокремити зміст (HTML) від його оформлення, що робить код чистішим і дозволяє керувати виглядом багатьох сторінок одночасно. 
+                </li>
+                <li>
+                  <b>Мова стилів:</b>
+                  Це не мова програмування, а набір правил, які описують, як повинен виглядати певний елемент веб-сторінки. 
+                </li>
+                 <li>
+                  <b>Застосування:</b>
+                  CSS використовується для стилізації елементів HTML, як-от заголовки, параграфи, таблиці, посилання, а також для створення складних макетів сторінок за допомогою таких технологій, як CSS Grid або Flexbox. 
+                </li>
+                 <li>
+                  <b>Специфікація: </b>
+                  CSS стандартизовано Консорціумом Всесвітньої павутини (W3C) і поділено на модулі, які розробляються та випускаються окремо. 
+                </li>
+              </ul>
+              </p>
+              <p>
+                <b>Для чого потрібен CSS:</b>
+                <ul>
+                <li>
+                  <b> Стилізація: </b> 
+                  Можна змінювати кольори, шрифти, розмір тексту, фон та інші візуальні аспекти елементів. 
+                </li>
+                <li>
+                  <b>Макетування: </b>
+                  Дозволяє керувати розташуванням елементів на сторінці, створювати сітки та багатоколонкові макети.
+                </li>
+                 <li>
+                  <b>Адаптивність:</b>
+                  Можна налаштовувати різні стилі для різних пристроїв (комп'ютерів, планшетів, телефонів) і розмірів екрана.
+                </li>
+                 <li>
+                  <b>Анімація та ефекти:  </b>
+                  Дає змогу додавати анімації, ефекти наведення курсору та інші декоративні елементи. 
+                </li>
+              </ul>
+              </p>
+              <p>
+                <b>HTML та CSS у парі</b>
+                <br>
+                HTML створює структуру вебсторінки (фундамент), а CSS додає стиль та естетику (оформлення будинку). Їхнє спільне використання дозволяє розділити вміст від візуального оформлення, що полегшує підтримку та зміну дизайну сайту
+              </p>
+              <p>
+                <b>Як працює "каскадність"</b>
+                <br>
+                Слово "каскадні" у назві означає, що стилі, визначені на різних рівнях, можуть впливати на елементи. Якщо для одного елемента існує кілька правил, CSS визначає, яке правило має вищий пріоритет. Наприклад, стиль, застосований до батьківського елемента, успадковується його дочірніми елементами, якщо не визначено інше.
+              </p>
+              <p>
+                <b>Кольори в CSS</b>
+                <br>
+                У CSS кольори можна задавати кількома способами:
+                <br>
+                <ul>
+                  <li>Назвою кольору: color: red;</li>
+                  <li>Шістнадцятковим кодом: color: #ff0000;</li>
+                  <li>RGB: color: rgb(255, 0, 0);</li>
+                  <li>RGBA (з прозорістю): color: rgba(255, 0, 0, 0.5);</li>
+                  <li>HSL: color: hsl(0, 100%, 50%);</li>
+                </ul>
+                <ul>Основні властивості:
+                  <li>color — колір тексту</li>
+                  <li>background-color — фоновий колір</li>
+                </ul>
+              </p>
+                 <p>
+                <b>Шрифти в CSS</b>
+                <br>CSS дозволяє налаштовувати вигляд тексту:
+                <br>
+                <ul>Основні властивості:
+                  <li>font-family — тип шрифту (наприклад: font-family: Arial, sans-serif;)</li>
+                  <li>font-size — розмір шрифту (font-size: 16px;)</li>
+                  <li>font-weight — товщина шрифту (bold, normal, lighter, 700)</li>
+                  <li>font-style — стиль (italic, normal)</li>
+                  <li>text-align — вирівнювання (left, center, right)</li>
+                  <li>line-height — міжрядковий інтервал</li>
+                </ul>
+              </p>
+              <p>
+                <b>Рамки в CSS</b>
+                <br>Рамки (borders) додають контур навколо елементів:
+                <br>
+                <ul>Основні властивості:
+                  <li>border-width — товщина рамки</li>
+                  <li>border-style — тип лінії (solid, dashed, dotted, none)</li>
+                  <li>border-color — колір рамки</li>
+                  <br><b>Скорочено - border: 2px solid black;</b>
+                  <br><b>Можна задати рамки окремо:</b>
+                  <br>border-top, border-right, border-bottom, border-left
+                </ul>
+              </p>
+              <b>Приклад CSS-коду:</b>
+              <br>p {
+                    <br>color: navy;
+                    <br>font-family: "Times New Roman", serif;
+                    <br>font-size: 18px;
+                    <br>border: 1px dashed gray;
+                    <br>background-color: #f0f0f0;
+                <br>}
+
+            </article>
+            <article id="tasks" class="card">
+              <h2>Домашнє завдання</h2>
+              <ol>
+                <li>Вивчити теорію</li>
+                <li>Зробити 5 прикладів CSS-коду з використанням усіх властивостей</li>
+              </ol>
+            </article>
+          </div>
+          <aside class="col col-4">
+            <div class="card">
+              <h3>Наступний урок</h3>
+              <a class="btn ghost" href="lesson5.html">Перейти</a>
+            </div>
+          </aside>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <p>© 2025 WebKids. Усі права захищено.</p>
+        <nav class="footer__nav">
+          <a href="#">Політика конфіденційності</a
+          ><a href="contact.html">Контакти</a>
+        </nav>
+      </div>
+    </footer>
+    <script>
+      const burger = document.querySelector(".burger");
+      const navRight = document.querySelector(".nav-right");
+
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        navRight.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

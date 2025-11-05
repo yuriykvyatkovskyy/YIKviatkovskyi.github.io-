@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Сторінка уроку — WebKids</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a href="index.html" class="brand" aria-label="На головну">
+          <img src="assets/logo.svg" alt="Лого WebKids" class="logo-img" />
+          <span class="brand__text">WebKids</span>
+        </a>
+        <div class="nav-right">
+          <nav class="menu" aria-label="Головне меню">
+            <a class="active" href="index.html">Головна</a>
+            <a href="lessons.html">Уроки</a>
+            <a href="about.html">Про нас</a>
+            <a href="faq.html">FAQ</a>
+            <a href="enroll.html">Записатися</a>
+            <a href="contact.html">Контакти</a>
+            <a href="dashboard.html">Кабінет</a>
+          </nav>
+          <div class="actions">
+            <a class="btn ghost" href="lesson1.html">Спробувати урок</a>
+            <a class="btn primary" href="enroll.html">Записатися</a>
+          </div>
+        </div>
+        <button class="burger" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <main class="section">
+      <div class="container lesson-page">
+        <nav class="breadcrumbs">
+          <a href="index.html">Головна</a> / <a href="lessons.html">Уроки</a> /
+          <span> Урок 3</span>
+        </nav>
+        <article class="lesson-head card">
+          <h1>Урок 3: Зображення</h1>
+          <p class="muted">Тривалість: 45 хв</p>
+          <div class="lesson-actions">
+            <a class="btn primary" href="#video">Дивитися відео</a
+            ><a class="btn ghost" href="#tasks">Домашнє завдання</a>
+          </div>
+        </article>
+        <section id="video" class="card">
+          <h2>Відео</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/azyltM_T9tc?si=4-MI92fCwCxgC_Ql" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <br><b>HTML. Зображення</b>
+        </section>
+        <section class="grid">
+          <div class="col col-8">
+            <article class="card">
+              <h2>Теорія</h2>
+              <p>Як вставити картинку в HTML-код:
+                <ol>
+                  <li>Вибрати зображення
+                    <p>
+                      Перш ніж додати зображення до HTML-коду сайту, знайдіть джерело, з якого можна скачати картинки. Якщо ви використовуєте фотографії, які зробили самостійно, жодних проблем не виникне. Інша річ, якщо плануєте як фон або доповнення до дизайну сторінки вставити картинку в HTML з інтернету. Розміщення зображень на сайті без урахування авторського права власника може спричинити неприємні наслідки — вас можуть змусити видалити картинку або навіть оштрафувати.
+                    </p>
+                  </li>
+                  <li>Визначити формат зображень
+                    <p>
+                      Рекомендуємо підбирати формат зображення, виходячи з контенту та призначення картинки:
+                      JPEG — щоб зберігати фотографії.
+                      GIF – для анімації.
+                      PNG — коли потрібно вставити зображення із прозорим фоном.
+                    </p>
+                  </li>
+                  <li>Вибрати назву файлу зображення
+                    <p>
+                        Давайте імена картинкам латинськими літерами. Якщо хочете, щоб ваші зображення знаходили за україномовними запитами, використовуйте трансліт — наприклад, не «book.jpg», а «knyga.jpg».
+                    </p>
+                    <p>
+                      Назву файлу картинки враховують пошукові системи при визначенні релевантності. Вибирайте назви для картинок, спираючись на зміст.
+                    </p>
+                    <p>
+                      Називайте файли картинок зрозуміло: не «img_jhksjdh52-2021.jpg», а «grusha.jpg». Такі імена допоможуть вам і пошуковим роботам швидше орієнтуватися в графічних файлах сайту.
+                    </p>
+                    <p>
+                      Наприклад, якщо на зображенні зображено море, назвіть файл «more.jpg». Пошуковий алгоритм врахує назву та асоціюватиме зображення зі словом «море». Якщо ім’я зображення буде випадковим набором літер, цей фактор не враховуватиметься.
+                    </p>
+                  </li>
+                   <li>Використовувати img-тег
+                    <p>
+                      Графічні зображення зберігаються в окремих файлах за межами HTML-файлу. Щоб зрозуміти, як вставити зображення в HTML, познайомимося зі спеціальним тегом, який містить посилання на ці файли — img-тегом. Закриваючий тег не потрібний. Зустрівши такий тег з адресою картинки, бравзер запитує у вебсервера відповідний файл із зображенням, а потім відображає його на сторінці.
+                    </p>
+                    <p>
+                      Img-тег не працює без атрибута src, який вказує на конкретне зображення. Інші атрибути необов’язкові та застосовуються за бажанням.
+                    </p>
+                    <p>
+                      Розглянемо синтаксис: &lt;img src="шлях до файлу"&gt;
+                    </p>
+                    <p>
+                      Атрибути width, height, align, border, alt та title використовуйте за потребою.
+                    </p>
+                    <p>
+                      Повний синтаксис: &lt;img src="шлях до файлу" width="" height="" align="" border="" alt="" title=""&gt;
+                    </p>
+                  </li>
+                </ol>
+              </p>
+
+            </article>
+            <article id="tasks" class="card">
+              <h2>Домашнє завдання</h2>
+              <ol>
+                <li>Вивчити теорію</li>
+                <li>Зробити 3 приклади зображення з усіма тегами і атрибутами</li>
+              </ol>
+            </article>
+          </div>
+          <aside class="col col-4">
+            <div class="card">
+              <h3>Наступний урок</h3>
+              <a class="btn ghost" href="lesson4.html">Перейти</a>
+            </div>
+          </aside>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <p>© 2025 WebKids. Усі права захищено.</p>
+        <nav class="footer__nav">
+          <a href="#">Політика конфіденційності</a
+          ><a href="contact.html">Контакти</a>
+        </nav>
+      </div>
+    </footer>
+    <script>
+      const burger = document.querySelector(".burger");
+      const navRight = document.querySelector(".nav-right");
+
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        navRight.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

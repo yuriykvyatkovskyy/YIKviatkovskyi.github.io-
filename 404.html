@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Сторінку не знайдено — WebKids</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a href="index.html" class="brand" aria-label="На головну">
+          <img src="assets/logo.svg" alt="Лого WebKids" class="logo-img" />
+          <span class="brand__text">WebKids</span>
+        </a>
+        <div class="nav-right">
+          <nav class="menu" aria-label="Головне меню">
+            <a class="active" href="index.html">Головна</a>
+            <a href="lessons.html">Уроки</a>
+            <a href="about.html">Про нас</a>
+            <a href="faq.html">FAQ</a>
+            <a href="enroll.html">Записатися</a>
+            <a href="contact.html">Контакти</a>
+            <a href="dashboard.html">Кабінет</a>
+          </nav>
+          <div class="actions">
+            <a class="btn ghost" href="lesson1.html">Спробувати урок</a>
+            <a class="btn primary" href="enroll.html">Записатися</a>
+          </div>
+        </div>
+        <button class="burger" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <main class="section">
+      <div class="container">
+        <div class="card" style="text-align: center">
+          <h1>404</h1>
+          <p class="muted">На жаль, такої сторінки немає.</p>
+          <a class="btn primary" href="index.html">Повернутися на головну</a>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <p>© 2025 WebKids. Усі права захищено.</p>
+        <nav class="footer__nav">
+          <a href="#">Політика конфіденційності</a
+          ><a href="contact.html">Контакти</a>
+        </nav>
+      </div>
+    </footer>
+    <script>
+      const burger = document.querySelector(".burger");
+      const navRight = document.querySelector(".nav-right");
+
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        navRight.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Записатися — WebKids</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a href="index.html" class="brand" aria-label="На головну">
+          <img src="assets/logo.svg" alt="Лого WebKids" class="logo-img" />
+          <span class="brand__text">WebKids</span>
+        </a>
+        <div class="nav-right">
+          <nav class="menu" aria-label="Головне меню">
+            <a class="active" href="index.html">Головна</a>
+            <a href="lessons.html">Уроки</a>
+            <a href="about.html">Про нас</a>
+            <a href="faq.html">FAQ</a>
+            <a href="enroll.html">Записатися</a>
+            <a href="contact.html">Контакти</a>
+            <a href="dashboard.html">Кабінет</a>
+          </nav>
+          <div class="actions">
+            <a class="btn ghost" href="lesson1.html">Спробувати урок</a>
+            <a class="btn primary" href="enroll.html">Записатися</a>
+          </div>
+        </div>
+        <button class="burger" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <main class="section">
+      <div class="container">
+        <div class="section__title">
+          <h1>Записатися на курс</h1>
+          <p class="muted">Заповніть форму — ми зв’яжемося</p>
+        </div>
+        <form class="card form" action="#" method="post">
+          <div class="form__row">
+            <label
+              >Ім’я учня<input
+                type="text"
+                required
+                placeholder="Олексій" /></label
+            ><label
+              >Клас<select>
+                <option>8</option>
+                <option>9</option>
+              </select></label
+            >
+          </div>
+          <div class="form__row">
+            <label
+              >Email батьків<input
+                type="email"
+                required
+                placeholder="name@example.com" /></label
+            ><label
+              >Телефон<input type="tel" required placeholder="+380..."
+            /></label>
+          </div>
+          <label
+            >Формат занять<select>
+              <option>Онлайн</option>
+              <option>Офлайн (Львів)</option>
+            </select></label
+          >
+          <label
+            >Коментар<textarea
+              rows="4"
+              placeholder="Побажання щодо розкладу..."></textarea>
+          </label>
+          <div class="form__actions">
+            <button class="btn primary" type="submit">Надіслати заявку</button
+            ><a class="btn ghost" href="index.html">На головну</a>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <p>© 2025 WebKids. Усі права захищено.</p>
+        <nav class="footer__nav">
+          <a href="#">Політика конфіденційності</a
+          ><a href="contact.html">Контакти</a>
+        </nav>
+      </div>
+    </footer>
+    <script>
+      const burger = document.querySelector(".burger");
+      const navRight = document.querySelector(".nav-right");
+
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        navRight.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

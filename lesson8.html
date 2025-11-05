@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Сторінка уроку — WebKids</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a href="index.html" class="brand" aria-label="На головну">
+          <img src="assets/logo.svg" alt="Лого WebKids" class="logo-img" />
+          <span class="brand__text">WebKids</span>
+        </a>
+        <div class="nav-right">
+          <nav class="menu" aria-label="Головне меню">
+            <a class="active" href="index.html">Головна</a>
+            <a href="lessons.html">Уроки</a>
+            <a href="about.html">Про нас</a>
+            <a href="faq.html">FAQ</a>
+            <a href="enroll.html">Записатися</a>
+            <a href="contact.html">Контакти</a>
+            <a href="dashboard.html">Кабінет</a>
+          </nav>
+          <div class="actions">
+            <a class="btn ghost" href="lesson1.html">Спробувати урок</a>
+            <a class="btn primary" href="enroll.html">Записатися</a>
+          </div>
+        </div>
+        <button class="burger" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <main class="section">
+      <div class="container lesson-page">
+        <nav class="breadcrumbs">
+          <a href="index.html">Головна</a> / <a href="lessons.html">Уроки</a> /
+          <span> Урок 8</span>
+        </nav>
+        <article class="lesson-head card">
+          <h1>Урок 8: Проєкт</h1>
+        </article>
+        <section class="grid">
+          <div class="col col-8">
+            <article class="card">
+              <h1>Фінальний проєкт: «Адаптивний сайт-портфоліо»</h1>
+              <ul>
+                <li><strong>Головна</strong> (<code>index.html</code>)</li>
+                <li><strong>Про мене / Про проєкт</strong></li>
+                <li><strong>Контакти</strong></li>
+              </ul>
+
+              <h3>Навігація:</h3>
+              <ul>
+                <li>Головне меню з посиланнями на всі сторінки</li>
+                <li>
+                  Адаптивне меню: перетворюється на бургер при ширині
+                  <code>&lt; 768px</code>
+                </li>
+              </ul>
+
+              <h3>Контент:</h3>
+              <ul>
+                <li>Заголовки, параграфи, кнопки</li>
+                <li>Зображення (адаптивні)</li>
+                <li>Таблиці або списки (наприклад, навички або розклад)</li>
+                <li>Кнопки «Зв’язатися» або «Дізнатись більше»</li>
+              </ul>
+
+              <h2>Вимоги до дизайну:</h2>
+              <table>
+                <tr>
+                  <th>Елемент</th>
+                  <th>Опис</th>
+                </tr>
+                <tr>
+                  <td>Адаптивність</td>
+                  <td>Використання media queries для мобільних</td>
+                </tr>
+                <tr>
+                  <td>Flexbox/Grid</td>
+                  <td>Для побудови розмітки блоків</td>
+                </tr>
+                <tr>
+                  <td>Відступи</td>
+                  <td>
+                    <code>padding</code>, <code>margin</code>,
+                    <code>gap</code> тощо
+                  </td>
+                </tr>
+                <tr>
+                  <td>Кольорова схема</td>
+                  <td>Єдина палітра (можна темна/світла)</td>
+                </tr>
+                <tr>
+                  <td>Шрифти</td>
+                  <td>Google Fonts або стандартні</td>
+                </tr>
+              </table>
+
+              <h2>Технічні вимоги:</h2>
+              <ul>
+                <li>
+                  Не використовуй CSS-фреймворки (Bootstrap тощо) — тільки
+                  чистий CSS.
+                </li>
+                <li>Файлова структура:</li>
+              </ul>
+              <pre><code>
+                  /project-folder
+                  ├── index.html
+                  ├── about.html
+                  ├── contact.html
+                  ├── /images
+                  ├── /css
+                  │ └── style.css
+                </code></pre>
+              <ul>
+                <li>Усі стилі — в окремому файлі <code>style.css</code>.</li>
+              </ul>
+
+              <h2>Що здати:</h2>
+              <ul>
+                <li>Повна структура проєкту.</li>
+                <li>3-5 скріншотів (десктопна і мобільна версія).</li>
+                <li>
+                  Короткий опис проєкту: що створено, які особливості, що було
+                  складно.
+                </li>
+              </ul>
+
+              <h2>Критерії оцінювання (12 балів):</h2>
+              <table>
+                <tr>
+                  <th>Категорія</th>
+                  <th>Бали</th>
+                </tr>
+                <tr>
+                  <td>Адаптивність</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Структура HTML</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>Використання Flexbox/Grid</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>Дизайн (кольори, шрифти, баланс)</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>Охайність, коментарі, структура</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>Креативність</td>
+                  <td>2</td>
+                </tr>
+              </table>
+
+              <h2>Порада:</h2>
+              <p>
+                Не бійся додати щось своє: анімації, тему «день/ніч», форму
+                зворотного зв’язку, слайдер тощо. Це покаже твою ініціативу!
+              </p>
+            </article>
+            <article id="tasks" class="card">
+              <h2>Домашнє завдання</h2>
+              <ol>
+                <li>Здати проєкт</li>
+              </ol>
+            </article>
+          </div>
+          <aside class="col col-4">
+            <div class="card">
+              <h3>Наступний урок</h3>
+              <a class="btn ghost" href="index.html">Перейти</a>
+            </div>
+          </aside>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <p>© 2025 WebKids. Усі права захищено.</p>
+        <nav class="footer__nav">
+          <a href="#">Політика конфіденційності</a
+          ><a href="contact.html">Контакти</a>
+        </nav>
+      </div>
+    </footer>
+    <script>
+      const burger = document.querySelector(".burger");
+      const navRight = document.querySelector(".nav-right");
+
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        navRight.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

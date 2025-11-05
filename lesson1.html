@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Сторінка уроку — WebKids</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a href="index.html" class="brand" aria-label="На головну">
+          <img src="assets/logo.svg" alt="Лого WebKids" class="logo-img" />
+          <span class="brand__text">WebKids</span>
+        </a>
+        <div class="nav-right">
+          <nav class="menu" aria-label="Головне меню">
+            <a class="active" href="index.html">Головна</a>
+            <a href="lessons.html">Уроки</a>
+            <a href="about.html">Про нас</a>
+            <a href="faq.html">FAQ</a>
+            <a href="enroll.html">Записатися</a>
+            <a href="contact.html">Контакти</a>
+            <a href="dashboard.html">Кабінет</a>
+          </nav>
+          <div class="actions">
+            <a class="btn ghost" href="lesson1.html">Спробувати урок</a>
+            <a class="btn primary" href="enroll.html">Записатися</a>
+          </div>
+        </div>
+        <button class="burger" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <main class="section">
+      <div class="container lesson-page">
+        <nav class="breadcrumbs">
+          <a href="index.html">Головна</a> / <a href="lessons.html">Уроки</a> /
+          <span> Урок 1</span>
+        </nav>
+        <article class="lesson-head card">
+          <h1>Урок 1: Вступ і HTML</h1>
+          <p class="muted">Тривалість: 45 хв</p>
+          <div class="lesson-actions">
+            <a class="btn primary" href="#video">Дивитися відео</a
+            ><a class="btn ghost" href="#tasks">Домашнє завдання</a>
+          </div>
+        </article>
+        <section id="video" class="card">
+          <h2>Відео</h2>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Rr9QmVLqoP4?si=rpNsbfXOBUCsvthO"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+          <br /><b>Основи HTML</b>
+        </section>
+        <section class="grid">
+          <div class="col col-8">
+            <article class="card">
+              <h2>Теорія</h2>
+              <p>
+                Що спільного між сайтом та авто? Багато людей щодня користуються
+                автомобілем — як пасажири або водії. Але далеко не всі знають
+                принцип роботи двигуна або системи безпеки. Це вже сфера
+                автомеханіків. Сайти так само мають “під капотом” багато того,
+                що звичайний користувач не бачить. Але ти — майбутній розробник.
+                Отже, почнемо зі знайомства з веб-технологіями, які користуються
+                найбільшим попитом.
+              </p>
+              <p>
+                Вебсайти – це основа, на якій тримається інтернет. І всі вони
+                побудовані на трьох основних технологіях. Використання однієї
+                технології не виключає всіх інших. Навпаки, вони зазвичай
+                використовуються разом.
+              </p>
+              <p>Що таке мова HTML?</p>
+              <p>
+                HyperText Markup Language (мова розмітки гіпертексту) — мова
+                розмітки веб-документів. Набір правил структурування (розмітки)
+                текстової інформації, додавання зображень, створення таблиць,
+                форм, списків тощо.
+              </p>
+              <p>HTML-документ — текстовий файл з розширенням .html.</p>
+            </article>
+            <article id="tasks" class="card">
+              <h2>Домашнє завдання</h2>
+              <ol>
+                <li>Вивчити теорію.</li>
+                <li>Знайти додатковий матеріал.</li>
+              </ol>
+            </article>
+          </div>
+          <aside class="col col-4">
+            <div class="card">
+              <h3>Наступний урок</h3>
+              <a class="btn ghost" href="lesson2.html">Перейти</a>
+            </div>
+          </aside>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <p>© 2025 WebKids. Усі права захищено.</p>
+        <nav class="footer__nav">
+          <a href="#">Політика конфіденційності</a
+          ><a href="contact.html">Контакти</a>
+        </nav>
+      </div>
+    </footer>
+    <script>
+      const burger = document.querySelector(".burger");
+      const navRight = document.querySelector(".nav-right");
+
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        navRight.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

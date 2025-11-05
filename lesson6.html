@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Сторінка уроку — WebKids</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a href="index.html" class="brand" aria-label="На головну">
+          <img src="assets/logo.svg" alt="Лого WebKids" class="logo-img" />
+          <span class="brand__text">WebKids</span>
+        </a>
+        <div class="nav-right">
+          <nav class="menu" aria-label="Головне меню">
+            <a class="active" href="index.html">Головна</a>
+            <a href="lessons.html">Уроки</a>
+            <a href="about.html">Про нас</a>
+            <a href="faq.html">FAQ</a>
+            <a href="enroll.html">Записатися</a>
+            <a href="contact.html">Контакти</a>
+            <a href="dashboard.html">Кабінет</a>
+          </nav>
+          <div class="actions">
+            <a class="btn ghost" href="lesson1.html">Спробувати урок</a>
+            <a class="btn primary" href="enroll.html">Записатися</a>
+          </div>
+        </div>
+        <button class="burger" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <main class="section">
+      <div class="container lesson-page">
+        <nav class="breadcrumbs">
+          <a href="index.html">Головна</a> / <a href="lessons.html">Уроки</a> /
+          <span> Урок 6</span>
+        </nav>
+        <article class="lesson-head card">
+          <h1>Урок 6: Flexbox</h1>
+          <p class="muted">Тривалість: 45 хв</p>
+          <div class="lesson-actions">
+            <a class="btn primary" href="#video">Дивитися відео</a
+            ><a class="btn ghost" href="#tasks">Домашнє завдання</a>
+          </div>
+        </article>
+        <section id="video" class="card">
+          <h2>Відео</h2>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/G-wSkTyIE44?si=52ez6uppwwCdyd_s"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+          <br /><b>Flexbox</b>
+        </section>
+        <section class="grid">
+          <div class="col col-8">
+            <article class="card">
+              <h2>Теорія</h2>
+              <h1>Flexbox CSS</h1>
+              <p>
+                <strong>Flexbox (Flexible Box Layout)</strong> — це система
+                розкладки, яка дозволяє розміщувати, вирівнювати та розтягувати
+                елементи <strong>в одному напрямку</strong>: по горизонталі або
+                вертикалі.
+              </p>
+              <h2>Основна структура</h2>
+              <pre><code>
+                  &lt;div class="container"&gt;
+                  &lt;div class="item"&gt;1&lt;/div&gt;
+                  &lt;div class="item"&gt;2&lt;/div&gt;
+                  &lt;div class="item"&gt;3&lt;/div&gt;
+                  &lt;/div&gt;
+
+                  .container {
+                        display: flex;
+                  }
+                </code></pre>
+
+              <h2>Властивості для контейнера</h2>
+              <table>
+                <tr>
+                  <td><code>flex-direction</code></td>
+                  <td>
+                    напрямок головної осі: <code>row</code>, <code>column</code>
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>justify-content</code></td>
+                  <td>вирівнювання по горизонталі</td>
+                </tr>
+                <tr>
+                  <td><code>align-items</code></td>
+                  <td>вирівнювання по вертикалі</td>
+                </tr>
+                <tr>
+                  <td><code>gap</code></td>
+                  <td>відстань між елементами</td>
+                </tr>
+              </table>
+
+              <h3>flex-direction</h3>
+              <pre><code>
+                  .container {
+                        flex-direction: row; /* або column */
+                  }
+                </code></pre>
+
+              <h3>justify-content</h3>
+              <table>
+                <tr>
+                  <th>Значення</th>
+                  <th>Пояснення</th>
+                </tr>
+                <tr>
+                  <td><code>flex-start</code></td>
+                  <td>зліва</td>
+                </tr>
+                <tr>
+                  <td><code>flex-end</code></td>
+                  <td>справа</td>
+                </tr>
+                <tr>
+                  <td><code>center</code></td>
+                  <td>по центру</td>
+                </tr>
+                <tr>
+                  <td><code>space-between</code></td>
+                  <td>відстань між елементами</td>
+                </tr>
+                <tr>
+                  <td><code>space-around</code></td>
+                  <td>з відступами навколо</td>
+                </tr>
+                <tr>
+                  <td><code>space-evenly</code></td>
+                  <td>рівномірні відступи</td>
+                </tr>
+              </table>
+
+              <h3>align-items</h3>
+              <table>
+                <tr>
+                  <th>Значення</th>
+                  <th>Пояснення</th>
+                </tr>
+                <tr>
+                  <td><code>stretch</code></td>
+                  <td>розтягнути по висоті (за замовчуванням)</td>
+                </tr>
+                <tr>
+                  <td><code>flex-start</code></td>
+                  <td>вирівняти до верху</td>
+                </tr>
+                <tr>
+                  <td><code>flex-end</code></td>
+                  <td>вирівняти до низу</td>
+                </tr>
+                <tr>
+                  <td><code>center</code></td>
+                  <td>по центру</td>
+                </tr>
+              </table>
+
+              <h2>Властивості для елементів усередині</h2>
+              <table>
+                <tr>
+                  <th>Властивість</th>
+                  <th>Опис</th>
+                </tr>
+                <tr>
+                  <td><code>flex-grow</code></td>
+                  <td>як сильно елемент може розширюватись</td>
+                </tr>
+                <tr>
+                  <td><code>flex-shrink</code></td>
+                  <td>як сильно може стискатись</td>
+                </tr>
+                <tr>
+                  <td><code>flex-basis</code></td>
+                  <td>початковий розмір</td>
+                </tr>
+                <tr>
+                  <td><code>flex</code></td>
+                  <td>скорочення: <code>flex: grow shrink basis</code></td>
+                </tr>
+                <tr>
+                  <td><code>align-self</code></td>
+                  <td>
+                    перевизначає <code>align-items</code> для окремого елемента
+                  </td>
+                </tr>
+              </table>
+              <pre><code>
+                  .item {
+                        flex: 1;
+                  }
+
+                  .item:first-child {
+                        flex: 2;
+                  }</code></pre>
+
+              <h2>Приклад у дії</h2>
+              <div class="container">
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+              </div>
+
+              <h2>Підсумок</h2>
+              <ul>
+                <li>Створювати адаптивні макети без float</li>
+                <li>Швидко вирівнювати елементи по центру</li>
+                <li>Контролювати розподіл простору</li>
+                <li>Робити сучасні інтерфейси просто й зрозуміло</li>
+              </ul>
+            </article>
+            <article id="tasks" class="card">
+              <h2>Домашнє завдання</h2>
+              <ol>
+                <li>Опрацювати теорію</li>
+              </ol>
+            </article>
+          </div>
+          <aside class="col col-4">
+            <div class="card">
+              <h3>Наступний урок</h3>
+              <a class="btn ghost" href="lesson7.html">Перейти</a>
+            </div>
+          </aside>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <p>© 2025 WebKids. Усі права захищено.</p>
+        <nav class="footer__nav">
+          <a href="#">Політика конфіденційності</a
+          ><a href="contact.html">Контакти</a>
+        </nav>
+      </div>
+    </footer>
+    <script>
+      const burger = document.querySelector(".burger");
+      const navRight = document.querySelector(".nav-right");
+
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        navRight.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
